@@ -1,0 +1,470 @@
+<html lang="ar" dir="rtl"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BiteSpot — أكل طازة، طعم مميز، وتجربة تستاهل. اطلب وجبتك أو احجز طاولتك.">
+  <title>BiteSpot | طعم يستاهل</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">
+    <span>🍔 طعم يفرّح يومك</span>
+    <span>توصيل سريع داخل المنطقة • يوميًا من 12 ظهرًا إلى 1 صباحًا</span>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="BiteSpot الرئيسية">
+        <span class="brand-mark">B<span>.</span></span>
+        <span class="brand-name">Bite<span>Spot</span><small>طعم يستاهل</small></span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+      <nav class="main-nav" id="mainNav">
+        <a class="nav-link active" href="#home">الرئيسية</a>
+        <a class="nav-link" href="#menu">المنيو</a>
+        <a class="nav-link" href="#about">حكايتنا</a>
+        <a class="nav-link" href="#reviews">آراء العملاء</a>
+        <a class="nav-link" href="#contact">تواصل معنا</a>
+      </nav>
+
+      <button class="cart-button" id="openCart" aria-label="فتح سلة الطلبات">
+        <span>🛒</span><span class="cart-label">طلبك</span><b id="cartCount">0</b>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-shape shape-one"></div>
+      <div class="hero-shape shape-two"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> الأكل الحلو بيبدأ من هنا</span>
+          <h1>لقمة واحدة<br>وهتقول <span>يا سلام!</span></h1>
+          <p>مكونات طازة، وصفات بحب، وطعم يخليك ترجع تاني. اختار أكلك المفضل وسيب الباقي علينا.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#menu">شوف المنيو <span>←</span></a>
+            <a class="btn btn-ghost" href="#about"><span class="play-icon">▶</span> حكايتنا إيه؟</a>
+          </div>
+          <div class="hero-proof">
+            <div class="avatar-stack" aria-hidden="true"><span>م</span><span>س</span><span>ع</span><span>+</span></div>
+            <div><strong>أكتر من 1,200 عميل سعيد</strong><small>طعم حلو ولمة أحلى ❤️</small></div>
+            <div class="proof-rating"><span>★</span><strong>4.9</strong><small>/ 5</small></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <!-- ضع صورة الوجبة الرئيسية هنا: images/hero-meal.jpg -->
+          <div class="hero-image image-placeholder" role="img" aria-label="مكان صورة الوجبة الرئيسية">
+            <span class="placeholder-icon">🍔</span><strong>مكان صورة الوجبة الرئيسية</strong><small>استبدل هذا المربع بصورة من مطعمك</small>
+          </div>
+          <div class="floating-card floating-rating"><span class="floating-icon">⭐</span><div><strong>4.9 من 5</strong><small>تقييم عملائنا</small></div></div>
+          <div class="floating-card floating-delivery"><span class="floating-icon">🛵</span><div><strong>توصيل سريع</strong><small>لحد باب البيت</small></div></div>
+          <div class="hero-sticker">طازة<br><span>كل يوم!</span></div>
+        </div>
+      </div>
+      <div class="hero-bottom-line"><span></span><span></span><span></span></div>
+    </section>
+
+    <section class="features section-pad">
+      <div class="container feature-grid">
+        <article class="feature-card"><span class="feature-icon">🥬</span><div><h3>مكونات طازة</h3><p>بنختار مكوناتنا بعناية كل يوم.</p></div></article>
+        <article class="feature-card"><span class="feature-icon">👨‍🍳</span><div><h3>متعمل بحب</h3><p>كل وجبة ليها اهتمامها الخاص.</p></div></article>
+        <article class="feature-card"><span class="feature-icon">🛵</span><div><h3>لحد عندك</h3><p>اطلب واستمتع من مكانك.</p></div></article>
+        <article class="feature-card"><span class="feature-icon">💛</span><div><h3>طعم يستاهل</h3><p>جودة حلوة وتجربة أحلى.</p></div></article>
+      </div>
+    </section>
+
+    <section class="menu-section section-pad" id="menu">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="section-kicker">اختار اللي على مزاجك</span><h2>منيو <span>يشهي!</span></h2><p>من أول لقمة لآخر حتة، كل حاجة معمولة عشان تتبسط.</p></div>
+          <div class="menu-search"><span>⌕</span><input id="menuSearch" type="search" placeholder="بتدور على إيه؟" aria-label="ابحث في المنيو"></div>
+        </div>
+        <div class="filter-row" id="filterRow" aria-label="تصنيفات المنيو">
+          <button class="filter-chip active" data-category="all">كل الأصناف <span>✦</span></button>
+          <button class="filter-chip" data-category="burger">🍔 برجر</button>
+          <button class="filter-chip" data-category="pizza">🍕 بيتزا</button>
+          <button class="filter-chip" data-category="pasta">🍝 مكرونة</button>
+          <button class="filter-chip" data-category="sides">🍟 جانبيات</button>
+          <button class="filter-chip" data-category="drinks">🥤 مشروبات</button>
+        </div>
+        <div class="menu-grid" id="menuGrid">
+    <article class="menu-card">
+      <div class="menu-card-image">
+        <!-- لاستبدال الإيموجي بصورة: ضع img هنا واستخدم مسار صورتك -->
+        <div class="image-placeholder" role="img" aria-label="مكان صورة بيج بايت برجر">
+          <span class="placeholder-icon">🍔</span>
+          <strong>صورة بيج بايت برجر</strong>
+          <small>أضف صورة الصنف هنا</small>
+        </div>
+        <span class="menu-badge">الأكثر طلبًا</span>
+      </div>
+      <div class="menu-card-content">
+        <div class="menu-card-top">
+          <h3>بيج بايت برجر</h3>
+          <span class="menu-rating">★ 4.9 <span>(Big Bite Burger)</span></span>
+        </div>
+        <p>برجر لحم، جبنة شيدر، خس، طماطم وصوص البيت المميز.</p>
+        <div class="menu-card-bottom">
+          <span class="price">249 ج.م</span>
+          <button class="add-button" data-add="1" aria-label="أضف بيج بايت برجر للسلة">+</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="menu-card">
+      <div class="menu-card-image">
+        <!-- لاستبدال الإيموجي بصورة: ضع img هنا واستخدم مسار صورتك -->
+        <div class="image-placeholder" role="img" aria-label="مكان صورة كريسبي تشيكن">
+          <span class="placeholder-icon">🍗</span>
+          <strong>صورة كريسبي تشيكن</strong>
+          <small>أضف صورة الصنف هنا</small>
+        </div>
+        <span class="menu-badge">مقرمش</span>
+      </div>
+      <div class="menu-card-content">
+        <div class="menu-card-top">
+          <h3>كريسبي تشيكن</h3>
+          <span class="menu-rating">★ 4.8 <span>(Crispy Chicken)</span></span>
+        </div>
+        <p>فراخ مقرمشة، خس طازة، ومايونيز في عيش بريوش.</p>
+        <div class="menu-card-bottom">
+          <span class="price">189 ج.م</span>
+          <button class="add-button" data-add="2" aria-label="أضف كريسبي تشيكن للسلة">+</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="menu-card">
+      <div class="menu-card-image">
+        <!-- لاستبدال الإيموجي بصورة: ضع img هنا واستخدم مسار صورتك -->
+        <div class="image-placeholder" role="img" aria-label="مكان صورة دبل تشيز برجر">
+          <span class="placeholder-icon">🍔</span>
+          <strong>صورة دبل تشيز برجر</strong>
+          <small>أضف صورة الصنف هنا</small>
+        </div>
+        <span class="menu-badge">لعشاق الجبنة</span>
+      </div>
+      <div class="menu-card-content">
+        <div class="menu-card-top">
+          <h3>دبل تشيز برجر</h3>
+          <span class="menu-rating">★ 4.9 <span>(Double Cheese)</span></span>
+        </div>
+        <p>قطعتين برجر مع شريحتين جبنة وصوص خاص.</p>
+        <div class="menu-card-bottom">
+          <span class="price">279 ج.م</span>
+          <button class="add-button" data-add="3" aria-label="أضف دبل تشيز برجر للسلة">+</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="menu-card">
+      <div class="menu-card-image">
+        <!-- لاستبدال الإيموجي بصورة: ضع img هنا واستخدم مسار صورتك -->
+        <div class="image-placeholder" role="img" aria-label="مكان صورة بيتزا مارجريتا">
+          <span class="placeholder-icon">🍕</span>
+          <strong>صورة بيتزا مارجريتا</strong>
+          <small>أضف صورة الصنف هنا</small>
+        </div>
+        <span class="menu-badge">كلاسيك</span>
+      </div>
+      <div class="menu-card-content">
+        <div class="menu-card-top">
+          <h3>بيتزا مارجريتا</h3>
+          <span class="menu-rating">★ 4.7 <span>(Margherita Pizza)</span></span>
+        </div>
+        <p>صلصة طماطم، موتزاريلا، ريحان ولمسة زيت زيتون.</p>
+        <div class="menu-card-bottom">
+          <span class="price">179 ج.م</span>
+          <button class="add-button" data-add="4" aria-label="أضف بيتزا مارجريتا للسلة">+</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="menu-card">
+      <div class="menu-card-image">
+        <!-- لاستبدال الإيموجي بصورة: ضع img هنا واستخدم مسار صورتك -->
+        <div class="image-placeholder" role="img" aria-label="مكان صورة بيتزا تشيكن رانش">
+          <span class="placeholder-icon">🍕</span>
+          <strong>صورة بيتزا تشيكن رانش</strong>
+          <small>أضف صورة الصنف هنا</small>
+        </div>
+        <span class="menu-badge">اختيار مميز</span>
+      </div>
+      <div class="menu-card-content">
+        <div class="menu-card-top">
+          <h3>بيتزا تشيكن رانش</h3>
+          <span class="menu-rating">★ 4.9 <span>(Chicken Ranch)</span></span>
+        </div>
+        <p>فراخ، موتزاريلا، فلفل ألوان وصوص رانش.</p>
+        <div class="menu-card-bottom">
+          <span class="price">239 ج.م</span>
+          <button class="add-button" data-add="5" aria-label="أضف بيتزا تشيكن رانش للسلة">+</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="menu-card">
+      <div class="menu-card-image">
+        <!-- لاستبدال الإيموجي بصورة: ضع img هنا واستخدم مسار صورتك -->
+        <div class="image-placeholder" role="img" aria-label="مكان صورة مكرونة ألفريدو">
+          <span class="placeholder-icon">🍝</span>
+          <strong>صورة مكرونة ألفريدو</strong>
+          <small>أضف صورة الصنف هنا</small>
+        </div>
+        
+      </div>
+      <div class="menu-card-content">
+        <div class="menu-card-top">
+          <h3>مكرونة ألفريدو</h3>
+          <span class="menu-rating">★ 4.8 <span>(Alfredo Pasta)</span></span>
+        </div>
+        <p>مكرونة بصوص كريمي وفراخ وجبنة بارميزان.</p>
+        <div class="menu-card-bottom">
+          <span class="price">199 ج.م</span>
+          <button class="add-button" data-add="6" aria-label="أضف مكرونة ألفريدو للسلة">+</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="menu-card">
+      <div class="menu-card-image">
+        <!-- لاستبدال الإيموجي بصورة: ضع img هنا واستخدم مسار صورتك -->
+        <div class="image-placeholder" role="img" aria-label="مكان صورة مكرونة سبايسي">
+          <span class="placeholder-icon">🍝</span>
+          <strong>صورة مكرونة سبايسي</strong>
+          <small>أضف صورة الصنف هنا</small>
+        </div>
+        <span class="menu-badge">حارة</span>
+      </div>
+      <div class="menu-card-content">
+        <div class="menu-card-top">
+          <h3>مكرونة سبايسي</h3>
+          <span class="menu-rating">★ 4.7 <span>(Spicy Pasta)</span></span>
+        </div>
+        <p>مكرونة بصلصة الطماطم والفلفل والتوابل.</p>
+        <div class="menu-card-bottom">
+          <span class="price">179 ج.م</span>
+          <button class="add-button" data-add="7" aria-label="أضف مكرونة سبايسي للسلة">+</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="menu-card">
+      <div class="menu-card-image">
+        <!-- لاستبدال الإيموجي بصورة: ضع img هنا واستخدم مسار صورتك -->
+        <div class="image-placeholder" role="img" aria-label="مكان صورة لودد فرايز">
+          <span class="placeholder-icon">🍟</span>
+          <strong>صورة لودد فرايز</strong>
+          <small>أضف صورة الصنف هنا</small>
+        </div>
+        <span class="menu-badge">مفضلة</span>
+      </div>
+      <div class="menu-card-content">
+        <div class="menu-card-top">
+          <h3>لودد فرايز</h3>
+          <span class="menu-rating">★ 4.8 <span>(Loaded Fries)</span></span>
+        </div>
+        <p>بطاطس مقرمشة مع جبنة وصوص البيت.</p>
+        <div class="menu-card-bottom">
+          <span class="price">99 ج.م</span>
+          <button class="add-button" data-add="8" aria-label="أضف لودد فرايز للسلة">+</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="menu-card">
+      <div class="menu-card-image">
+        <!-- لاستبدال الإيموجي بصورة: ضع img هنا واستخدم مسار صورتك -->
+        <div class="image-placeholder" role="img" aria-label="مكان صورة أونيون رينجز">
+          <span class="placeholder-icon">🧅</span>
+          <strong>صورة أونيون رينجز</strong>
+          <small>أضف صورة الصنف هنا</small>
+        </div>
+        
+      </div>
+      <div class="menu-card-content">
+        <div class="menu-card-top">
+          <h3>أونيون رينجز</h3>
+          <span class="menu-rating">★ 4.6 <span>(Onion Rings)</span></span>
+        </div>
+        <p>حلقات بصل ذهبية ومقرمشة.</p>
+        <div class="menu-card-bottom">
+          <span class="price">79 ج.م</span>
+          <button class="add-button" data-add="9" aria-label="أضف أونيون رينجز للسلة">+</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="menu-card">
+      <div class="menu-card-image">
+        <!-- لاستبدال الإيموجي بصورة: ضع img هنا واستخدم مسار صورتك -->
+        <div class="image-placeholder" role="img" aria-label="مكان صورة ليمون بالنعناع">
+          <span class="placeholder-icon">🍋</span>
+          <strong>صورة ليمون بالنعناع</strong>
+          <small>أضف صورة الصنف هنا</small>
+        </div>
+        <span class="menu-badge">منعش</span>
+      </div>
+      <div class="menu-card-content">
+        <div class="menu-card-top">
+          <h3>ليمون بالنعناع</h3>
+          <span class="menu-rating">★ 4.8 <span>(Lemon Mint)</span></span>
+        </div>
+        <p>ليمون طازة ونعناع وثلج.</p>
+        <div class="menu-card-bottom">
+          <span class="price">59 ج.م</span>
+          <button class="add-button" data-add="10" aria-label="أضف ليمون بالنعناع للسلة">+</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="menu-card">
+      <div class="menu-card-image">
+        <!-- لاستبدال الإيموجي بصورة: ضع img هنا واستخدم مسار صورتك -->
+        <div class="image-placeholder" role="img" aria-label="مكان صورة آيس كوفي">
+          <span class="placeholder-icon">🧋</span>
+          <strong>صورة آيس كوفي</strong>
+          <small>أضف صورة الصنف هنا</small>
+        </div>
+        
+      </div>
+      <div class="menu-card-content">
+        <div class="menu-card-top">
+          <h3>آيس كوفي</h3>
+          <span class="menu-rating">★ 4.7 <span>(Iced Coffee)</span></span>
+        </div>
+        <p>قهوة باردة بطعم غني ولمسة حليب.</p>
+        <div class="menu-card-bottom">
+          <span class="price">89 ج.م</span>
+          <button class="add-button" data-add="11" aria-label="أضف آيس كوفي للسلة">+</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="menu-card">
+      <div class="menu-card-image">
+        <!-- لاستبدال الإيموجي بصورة: ضع img هنا واستخدم مسار صورتك -->
+        <div class="image-placeholder" role="img" aria-label="مكان صورة كولا">
+          <span class="placeholder-icon">🥤</span>
+          <strong>صورة كولا</strong>
+          <small>أضف صورة الصنف هنا</small>
+        </div>
+        
+      </div>
+      <div class="menu-card-content">
+        <div class="menu-card-top">
+          <h3>كولا</h3>
+          <span class="menu-rating">★ 4.5 <span>(Cola)</span></span>
+        </div>
+        <p>مشروب غازي بارد.</p>
+        <div class="menu-card-bottom">
+          <span class="price">35 ج.م</span>
+          <button class="add-button" data-add="12" aria-label="أضف كولا للسلة">+</button>
+        </div>
+      </div>
+    </article>
+  </div>
+        <p class="no-results hidden" id="noResults">مفيش أصناف مطابقة للبحث. جرّب كلمة تانية 😊</p>
+        <div class="menu-footer"><span>كل الأسعار بالجنيه المصري</span><span>الأسعار المعروضة نموذجية ويمكن تعديلها حسب المطعم.</span></div>
+      </div>
+    </section>
+
+    <section class="special-section section-pad">
+      <div class="container special-card">
+        <div class="special-copy">
+          <span class="special-label">🔥 ترشيحنا ليك</span>
+          <h2>وجبة الـ<br><span>Big Bite</span></h2>
+          <p>برجر غني بالطعم، جبنة سايحة، وصوصنا المميز مع بطاطس مقرمشة. وجبة معمولة عشان تشبع مزاجك.</p>
+          <div class="special-price"><strong>249 <small>ج.م</small></strong><del>289 ج.م</del><span>اختيار مميز</span></div>
+          <button class="btn btn-dark" data-add="1">ضيفها لطلبك <span>←</span></button>
+        </div>
+        <div class="special-visual">
+          <!-- ضع صورة وجبة Big Bite هنا -->
+          <div class="special-image image-placeholder" role="img" aria-label="مكان صورة وجبة Big Bite">
+            <span class="placeholder-icon">🍔</span><strong>صورة وجبة Big Bite</strong><small>ضع صورتك هنا</small>
+          </div>
+          <div class="special-burst">طعم<br>جامد!</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section section-pad" id="about">
+      <div class="container about-grid">
+        <div class="about-visual">
+          <!-- ضع صورة المطعم أو الشيف هنا -->
+          <div class="about-image image-placeholder" role="img" aria-label="مكان صورة المطعم">
+            <span class="placeholder-icon">👨‍🍳</span><strong>صورة المطعم أو الشيف</strong><small>أضف صورة حقيقية للمكان</small>
+          </div>
+          <div class="about-note"><span>❤️</span><div><strong>الطعم في التفاصيل</strong><small>من أول مكون لحد آخر لقمة</small></div></div>
+        </div>
+        <div class="about-copy">
+          <span class="section-kicker">إحنا مين؟</span>
+          <h2>مش مجرد أكل…<br><span>دي حكاية طعم.</span></h2>
+          <p>في BiteSpot بنؤمن إن الأكل الحلو بيجمع الناس. عشان كده بنهتم بكل تفصيلة: من اختيار المكونات، لتحضير كل وجبة، لحد ما طلبك يوصل لك وأنت مبسوط.</p>
+          <p>إحنا هنا عشان نخلي وجبتك اليومية لحظة تستاهلها، سواء بتاكل لوحدك أو بتشارك أحلى لمة مع أصحابك.</p>
+          <div class="about-stats"><div><strong>100%</strong><span>اهتمام بالتفاصيل</span></div><div><strong>طازة</strong><span>على قد ما نقدر كل يوم</span></div><div><strong>بحب</strong><span>في كل وجبة</span></div></div>
+          <a class="text-link" href="#contact">تعالى نكون على تواصل <span>←</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews-section section-pad" id="reviews">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-kicker">كلام يفرحنا</span><h2>عملاؤنا <span>بيقولوا إيه؟</span></h2><p>نماذج نصوص تجريبية — استبدلها بآراء حقيقية بإذن أصحابها.</p>
+        </div>
+        <div class="reviews-grid">
+          <article class="review-card"><div class="stars">★★★★★</div><p>“البرجر كان طعمه حلو جدًا، والتفاصيل كلها مظبوطة. أكيد هطلب تاني!”</p><div class="review-person"><span class="review-avatar">م</span><div><strong>مريم ع.</strong><small>عميلة — رأي تجريبي</small></div></div><span class="quote-mark">”</span></article>
+          <article class="review-card featured-review"><div class="stars">★★★★★</div><p>“المنيو متنوعة والطلب كان سهل، والأكل وصل بشكل كويس. تجربة لطيفة.”</p><div class="review-person"><span class="review-avatar">ك</span><div><strong>كريم م.</strong><small>عميل — رأي تجريبي</small></div></div><span class="quote-mark">”</span></article>
+          <article class="review-card"><div class="stars">★★★★★</div><p>“جربت البيتزا والبطاطس، الاتنين كانوا حلوين. مستني أجرب باقي المنيو.”</p><div class="review-person"><span class="review-avatar">ن</span><div><strong>نور س.</strong><small>عميلة — رأي تجريبي</small></div></div><span class="quote-mark">”</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reservation-section section-pad" id="reservation">
+      <div class="container reservation-grid">
+        <div class="reservation-copy"><span class="section-kicker">لمة حلوة مستنياك</span><h2>احجز مكانك<br><span>واستمتع باللمة.</span></h2><p>املأ البيانات وهنجهز لك رسالة حجز تقدر تبعتها للمطعم على واتساب.</p><div class="reservation-points"><span>✓ مناسب للعيلة والأصحاب</span><span>✓ اختار اليوم والوقت المناسب</span><span>✓ تأكيد الحجز يدويًا من المطعم</span></div></div>
+        <form class="reservation-form" id="reservationForm">
+          <h3>احجز طاولتك</h3><p>املأ البيانات الأساسية</p>
+          <label for="guestName">الاسم</label><input id="guestName" name="guestName" required="" maxlength="80" placeholder="اسمك بالكامل">
+          <div class="form-two"><div><label for="guestPhone">رقم الموبايل</label><input id="guestPhone" name="guestPhone" type="tel" required="" maxlength="20" placeholder="01xxxxxxxxx"></div><div><label for="guestCount">عدد الأفراد</label><select id="guestCount" name="guestCount"><option>1</option><option selected="">2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7 أو أكتر</option></select></div></div>
+          <div class="form-two"><div><label for="bookingDate">التاريخ</label><input id="bookingDate" name="bookingDate" type="date" required="" min="2026-10-25"></div><div><label for="bookingTime">الوقت</label><select id="bookingTime" name="bookingTime"><option>12:00 ظهرًا</option><option>2:00 مساءً</option><option>4:00 مساءً</option><option>6:00 مساءً</option><option>8:00 مساءً</option><option>10:00 مساءً</option><option>12:00 منتصف الليل</option></select></div></div>
+          <label for="bookingNotes">ملاحظات (اختياري)</label><textarea id="bookingNotes" name="bookingNotes" rows="2" maxlength="300" placeholder="أي تفاصيل تحب تقولها؟"></textarea>
+          <button class="btn btn-primary btn-full" type="submit">جهّز رسالة الحجز <span>←</span></button>
+          <small class="form-hint">الحجز لا يتأكد تلقائيًا؛ هتحتاج تبعت الرسالة وتستنى تأكيد المطعم.</small>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact-strip" id="contact">
+      <div class="container contact-strip-inner"><div><span class="section-kicker">مستنيينك</span><h2>جعان؟ إحنا جاهزين 😋</h2><p>اطلب دلوقتي أو تعالى زورنا — عدّل بيانات التواصل قبل نشر الموقع.</p></div><a class="btn btn-light" id="contactWhatsApp" href="#" target="_blank" rel="noopener">كلمنا على واتساب <span>↗</span></a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><a class="brand brand-light" href="#home"><span class="brand-mark">B<span>.</span></span><span class="brand-name">Bite<span>Spot</span><small>طعم يستاهل</small></span></a><p>أكل معمول بحب، ولمة بتكمل بالطعم الحلو.</p><div class="social-links"><a href="#" aria-label="إنستجرام">ig</a><a href="#" aria-label="فيسبوك">f</a><a href="#" aria-label="تيك توك">♪</a></div></div>
+      <div><h3>روابط سريعة</h3><a href="#home">الرئيسية</a><a href="#menu">المنيو</a><a href="#about">حكايتنا</a><a href="#reservation">الحجز</a></div>
+      <div><h3>مواعيدنا</h3><p>كل يوم</p><p>12 ظهرًا — 1 صباحًا</p><p class="muted">عدّل المواعيد حسب نشاطك.</p></div>
+      <div><h3>زورنا</h3><p>اكتب عنوان المطعم هنا</p><p>القاهرة، مصر</p><p dir="ltr">0100 000 0000</p><a class="footer-contact" href="#contact">بيانات التواصل</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year">2026</span> BiteSpot. جميع الحقوق محفوظة.</span><span>اتعمل بحب ❤️</span></div>
+  </footer>
+
+  <div class="overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="سلة الطلبات" aria-hidden="true">
+    <div class="cart-header"><div><span class="section-kicker">طلبك اللذيذ</span><h2>سلة الطلبات <span id="drawerCount">(0)</span></h2></div><button class="icon-button" id="closeCart" aria-label="إغلاق السلة">✕</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty"><span>🛍️</span><h3>لسه السلة فاضية!</h3><p>اختار أكلة من المنيو وهنضيفها هنا.</p><button class="btn btn-primary" id="browseMenu">تصفح المنيو</button></div>
+    <div class="cart-summary hidden" id="cartSummary"><div><span>الإجمالي</span><strong id="cartTotal">0 ج.م</strong></div><small>تكلفة التوصيل، إن وجدت، يتم تحديدها مع المطعم.</small><button class="btn btn-primary btn-full" id="checkoutButton">اطلب عبر واتساب <span>↗</span></button><button class="clear-cart" id="clearCart">فضّي السلة</button></div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+
+
+</body></html>
